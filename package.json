@@ -1,7 +1,7 @@
 {
-  "name": "books",
+  "name": "quiz-app",
   "version": "1.0.0",
-  "repository": "https://github.com/hsoljic1/books",
+  "repository": "https://github.com/hsoljic1/quiz-app",
   "author": "hsoljic1",
   "license": "MIT",
   "private": true,
@@ -14,6 +14,7 @@
     "npm": "^8.1.2"
   },
   "devDependencies": {
+    "prettier": "^2.4.1",
     "typescript": "^4.4.4"
   }
 }
