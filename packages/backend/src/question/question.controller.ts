@@ -5,10 +5,6 @@ import { QuestionService } from './question.service';
 export class QuestionController {
   constructor(private questionService: QuestionService) {}
 
-  @Get()
-  findAll(): any {
-    return this.questionService.findAll();
-  }
 
   @Get(':id')
   findOne(@Param('id') id: number): string {

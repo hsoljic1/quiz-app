@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Answer } from './answer/answer.entity';
+import { AnswerModule } from './answer/answer.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Question } from './question/question.entity';
@@ -15,6 +17,8 @@ import { QuizModule } from './quiz/quiz.module';
     TypeOrmModule.forFeature([Quiz]),
     QuestionModule,
     TypeOrmModule.forFeature([Question]),
+    AnswerModule,
+    TypeOrmModule.forFeature([Answer]),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',

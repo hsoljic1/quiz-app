@@ -13,8 +13,9 @@ export class QuestionService {
     private quizRepository: Repository<Quiz>
   ) {}
 
-  findAll(): Promise<Question[]> {
-    return this.questionRepository.find();
+  async findAll(id: number): Promise<Question[]> {
+    const questions = await this.questionRepository.find();
+    return questions.filter((question) => question.id == id);
   }
 
   findOne(id: string): Promise<Question> {

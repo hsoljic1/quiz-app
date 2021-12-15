@@ -14,7 +14,7 @@ export class QuizService {
     return this.quizRepository.find();
   }
 
-  findOne(id: string): Promise<Quiz> {
+  findOne(id: number): Promise<Quiz> {
     return this.quizRepository.findOne(id);
   }
 
